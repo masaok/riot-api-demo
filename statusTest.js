@@ -15,13 +15,22 @@ async function fetchStatus() {
   return data
 }
 
-fetchStatus().then(data => console.log(data))
+fetchStatus().then(data => {
+  console.log('FETCH STATUS')
+  console.log(data)
+})
 
 // Function as variable
 const fetchStatusAgain = async () => {
   let response = await fetch(url)
-  let data = await response.json()
-  return data
+  return response
 }
 
-fetchStatusAgain().then(data => console.log(data))
+fetchStatusAgain().then(response => {
+  const headers = response.headers
+  const data = response.json()
+  console.log('FETCH STATUS AGAIN HEADERS:')
+  console.log(headers)
+  console.log('FETCH STATUS AGAIN DATA:')
+  console.log(data)
+})
