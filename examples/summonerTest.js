@@ -8,7 +8,8 @@ const { API_KEY, SUMMONER_NAME } = process.env
 
 // const url = `https://na1.api.riotgames.com/lol/status/v3/shard-data?api_key=${API_KEY}`
 
-const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${SUMMONER_NAME}?api_key=${API_KEY}`
+// const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${SUMMONER_NAME}?api_key=${API_KEY}`
+const url = `https://na1.api.riotgames.com/lol/summoner/v4/summoners/me?api_key=${API_KEY}`
 
 // Function as variable
 const fetchAPI = async () => {
